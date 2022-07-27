@@ -1,8 +1,14 @@
+div#browser {
+  border: 2px solid #666666; }
+  div#browser.maximized {
+    border-width: 0; }
+
 #header {
   background-color: #dee0e2 !important; }
   #header #titlebar button.vivaldi {
     color: black;
-    height: 30px; }
+    height: 30px;
+    margin-top: 3px; }
   #header #titlebar div.window-buttongroup {
     padding-right: 0;
     padding-top: 5px; }
@@ -35,6 +41,12 @@
       min-height: 28px; }
       #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span {
         margin-right: -5px; }
+        #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span:first-of-type div.tab {
+          border-top-left-radius: 5px !important;
+          border-left: 2px solid rgba(0, 0, 0, 0.25); }
+          #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span:first-of-type div.tab.active {
+            border-top-left-radius: 0 !important;
+            border-left: 2px solid transparent; }
         #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span:last-of-type div.tab {
           border-top-right-radius: 5px !important; }
         #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position {
@@ -85,8 +97,7 @@
   #main div.mainbar div.toolbar div.UrlBar-AddressField {
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.33);
-    padding: 1px;
-    overflow: hidden; }
+    padding: 1px; }
     #main div.mainbar div.toolbar div.UrlBar-AddressField:focus-within {
       outline: none !important;
       border-color: #3daee9;
@@ -103,6 +114,20 @@
         left: 0;
         border-radius: 5px;
         background-color: #3daee9; }
+    #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown {
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      transition: all 1000ms ease; }
+      #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown label.OmniDropdown-Label {
+        opacity: 0.75;
+        font-weight: bold; }
+      #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.omni-clickable:hover {
+        background-color: #3daee9;
+        color: #fff; }
+      #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.omni-clickable.OmniLinkItem--Highlighted {
+        background-color: #3daee9; }
+      #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.OmniLinkItem span.OmniLinkItem-Url {
+        padding-top: 1px; }
   #main div.mainbar div.toolbar div.toolbar-extensions {
     height: 100%;
     background: none !important;
@@ -120,5 +145,19 @@
 
 .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button {
   border-radius: 0 !important; }
+
+#modal-bg {
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.33); }
+  #modal-bg > div {
+    background-color: transparent !important;
+    backdrop-filter: blur(10px); }
+    #modal-bg > div div.quick-command-container {
+      background-color: transparent !important; }
+      #modal-bg > div div.quick-command-container div.quick-commands {
+        background-color: rgba(255, 255, 255, 0.85) !important;
+        backdrop-filter: blur(10px); }
+      #modal-bg > div div.quick-command-container div.qc-entry {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+        backdrop-filter: blur(10px); }
 
 /*# sourceMappingURL=kubuntu.css.map */

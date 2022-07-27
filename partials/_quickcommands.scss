@@ -1,0 +1,24 @@
+
+#modal-bg {
+	$transparentBg: rgba(255,255,255, 0.85);
+	box-shadow: 0px 0px 6px 3px rgba(0,0,0, 0.33);
+	
+	> div {
+		background-color: transparent !important;
+		backdrop-filter: blur(10px);
+
+		div.quick-command-container {
+			background-color: transparent !important;
+
+			div.quick-commands {
+				background-color: $transparentBg !important;
+				backdrop-filter: blur(10px);
+			}
+
+			div.qc-entry {
+				background-color: rgba(255,255,255, 0.9) !important;
+				backdrop-filter: blur(10px);
+			}
+		}
+	}
+}

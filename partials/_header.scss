@@ -7,6 +7,7 @@
 		button.vivaldi {
 			color: black;
 			height: 30px;
+			margin-top: 3px;
 		}
 
 		div.window-buttongroup {
@@ -75,7 +76,13 @@
 
 						&:first-of-type {
 							div.tab {
-								//border-top-left-radius: 5px !important;
+								border-top-left-radius: 5px !important;
+								border-left: 2px solid $borderColor;
+
+								&.active {
+									border-top-left-radius: 0 !important;
+									border-left: 2px solid transparent;
+								}
 							}
 						}
 

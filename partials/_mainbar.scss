@@ -11,7 +11,9 @@ $toolbarBg: linear-gradient(180deg, rgba(222, 224, 226, 1) 0%, rgba(239, 240, 24
 				border-radius: 5px;
 				border: 1px solid rgba(0,0,0, 0.33);
 				padding: 1px;
-				overflow: hidden;
+				
+				// Setting this will hide history
+				//overflow: hidden;
 			
 				&:focus-within {
 					outline: none !important;
@@ -34,6 +36,34 @@ $toolbarBg: linear-gradient(180deg, rgba(222, 224, 226, 1) 0%, rgba(239, 240, 24
 						left: 0;
 						border-radius: 5px;
 						background-color: $accent;
+					}
+				}
+
+				div.OmniDropdown {
+					background-color: rgba(255,255,255, 0.9);
+					backdrop-filter: blur(10px);
+					transition: all 1000ms ease;
+
+					label.OmniDropdown-Label {
+						opacity: 0.75;
+						font-weight: bold;
+					}
+
+					div.omni-clickable {
+						&:hover {
+							background-color: $accent;
+							color: #fff;
+						}
+
+						&.OmniLinkItem--Highlighted {
+							background-color: $accent;
+						}
+					}
+
+					div.OmniLinkItem {
+						span.OmniLinkItem-Url {
+							padding-top: 1px;
+						}
 					}
 				}
 			}

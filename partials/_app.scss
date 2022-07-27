@@ -1,0 +1,7 @@
+div#browser {
+	border: 2px solid lighten(black, 40%);
+
+	&.maximized {
+		border-width: 0;
+	}
+}
