@@ -40,7 +40,7 @@
         #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position {
           height: 28px;
           margin-right: -3px;
-          width: 181px; }
+          width: calc(var(--Width) + 1px); }
           #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab {
             border-radius: 0;
             padding-top: 2px;
