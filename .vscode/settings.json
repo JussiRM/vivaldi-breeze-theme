@@ -1,0 +1,10 @@
+{
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": ".*\\.scss",
+                "cmd": "scss kubuntu.scss:kubuntu.css"
+            }
+        ]
+    }
+}

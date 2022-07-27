@@ -1,0 +1,70 @@
+$toolbarBg: linear-gradient(180deg, rgba(222, 224, 226, 1) 0%, rgba(239, 240, 241, 1) 100%);
+
+#main {
+	div.mainbar {
+		div.toolbar {
+			height: 38px;
+			//background-color: #eff0f1 !important;
+			background: $toolbarBg;
+
+			div.UrlBar-AddressField {
+				border-radius: 5px;
+				border: 1px solid rgba(0,0,0, 0.33);
+				padding: 1px;
+				overflow: hidden;
+			
+				&:focus-within {
+					outline: none !important;
+					border-color: $accent;
+					border-width: 2px;
+					padding: 0;
+				
+				}
+				//height: 28px;
+
+				div.toolbar {
+					background: none !important;
+
+					progress.pageload-indicator {
+						opacity: 0.25;
+						top: -1px;
+						bottom: 0;
+						height: calc(100% + 1px);
+						right: 0;
+						left: 0;
+						border-radius: 5px;
+						background-color: $accent;
+					}
+				}
+			}
+
+			div.toolbar-extensions {
+				height: 100%;
+				background: none !important;
+				margin-right: 2px;
+			}
+
+			div.button-toolbar {
+				height: 100%;
+				button {
+					border: 2px solid transparent;
+					border-radius: $borderRadius;
+					&:hover {
+						background-color: transparent !important;
+						border: 2px solid $accent;
+					}
+
+					&[name="AccountButton"] {
+						img {
+							border-radius: $borderRadius;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput>.toolbar-group>.button-toolbar button {
+	border-radius: 0 !important;
+}

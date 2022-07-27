@@ -1,0 +1,124 @@
+#header {
+  background-color: #dee0e2 !important; }
+  #header #titlebar button.vivaldi {
+    color: black;
+    height: 30px; }
+  #header #titlebar div.window-buttongroup {
+    padding-right: 0;
+    padding-top: 5px; }
+    #header #titlebar div.window-buttongroup > button {
+      background-color: transparent;
+      width: 16px;
+      height: 16px;
+      margin-right: 5px; }
+      #header #titlebar div.window-buttongroup > button svg {
+        display: none; }
+    #header #titlebar div.window-buttongroup > button.window-minimize {
+      background-image: url("./images/minimize.png");
+      background-size: cover; }
+      #header #titlebar div.window-buttongroup > button.window-minimize:hover {
+        background-image: url("./images/minimize_hover.png"); }
+    #header #titlebar div.window-buttongroup > button.window-maximize {
+      background-image: url("./images/maximize.png");
+      background-size: cover; }
+      #header #titlebar div.window-buttongroup > button.window-maximize:hover {
+        background-image: url("./images/maximize_hover.png"); }
+    #header #titlebar div.window-buttongroup > button.window-close {
+      background-image: url("./images/close.png");
+      background-size: cover; }
+      #header #titlebar div.window-buttongroup > button.window-close:hover {
+        background-image: url("./images/close_hover.png"); }
+  #header #tabs-tabbar-container {
+    padding-top: 5px;
+    height: 28px !important; }
+    #header #tabs-tabbar-container #tabs-container {
+      min-height: 28px; }
+      #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span {
+        margin-right: -5px; }
+        #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span:last-of-type div.tab {
+          border-top-right-radius: 5px !important; }
+        #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position {
+          height: 28px;
+          margin-right: -3px;
+          width: 181px; }
+          #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab {
+            border-radius: 0;
+            padding-top: 2px;
+            color: #000;
+            background-color: #cbccce;
+            border-top: 1px solid rgba(0, 0, 0, 0.25);
+            border-right: 2px solid rgba(0, 0, 0, 0.25);
+            transition: all 100ms ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+            #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab:hover {
+              background-color: #d8d9da; }
+            #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab.active {
+              padding-top: 0;
+              border-top: 3px solid #3daee9;
+              background-color: #dee0e2;
+              border-bottom-color: transparent; }
+            #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab div.tab-header {
+              flex: 0 0 28px;
+              padding-top: 2px;
+              padding-bottom: 6px; }
+              #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab div.tab-header span.title {
+                margin-top: -1px; }
+    #header #tabs-tabbar-container div.toolbar {
+      justify-content: start; }
+      #header #tabs-tabbar-container div.toolbar button {
+        color: black;
+        opacity: 1;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        min-width: auto !important;
+        min-height: auto !important; }
+        #header #tabs-tabbar-container div.toolbar button:hover {
+          border: 2px solid #3daee9; }
+      #header #tabs-tabbar-container div.toolbar div.newtab {
+        margin-left: 2px; }
+        #header #tabs-tabbar-container div.toolbar div.newtab button {
+          margin-top: 2px; }
+
+#main div.mainbar div.toolbar {
+  height: 38px;
+  background: linear-gradient(180deg, #dee0e2 0%, #eff0f1 100%); }
+  #main div.mainbar div.toolbar div.UrlBar-AddressField {
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.33);
+    padding: 1px;
+    overflow: hidden; }
+    #main div.mainbar div.toolbar div.UrlBar-AddressField:focus-within {
+      outline: none !important;
+      border-color: #3daee9;
+      border-width: 2px;
+      padding: 0; }
+    #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar {
+      background: none !important; }
+      #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar progress.pageload-indicator {
+        opacity: 0.25;
+        top: -1px;
+        bottom: 0;
+        height: calc(100% + 1px);
+        right: 0;
+        left: 0;
+        border-radius: 5px;
+        background-color: #3daee9; }
+  #main div.mainbar div.toolbar div.toolbar-extensions {
+    height: 100%;
+    background: none !important;
+    margin-right: 2px; }
+  #main div.mainbar div.toolbar div.button-toolbar {
+    height: 100%; }
+    #main div.mainbar div.toolbar div.button-toolbar button {
+      border: 2px solid transparent;
+      border-radius: 5px; }
+      #main div.mainbar div.toolbar div.button-toolbar button:hover {
+        background-color: transparent !important;
+        border: 2px solid #3daee9; }
+      #main div.mainbar div.toolbar div.button-toolbar button[name="AccountButton"] img {
+        border-radius: 5px; }
+
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button {
+  border-radius: 0 !important; }
+
+/*# sourceMappingURL=kubuntu.css.map */
