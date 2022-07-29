@@ -1,134 +1,142 @@
 @import "./variables";
+#browser {
+	#header {
+		background-color: $kdeBgColor  !important;
 
-#header {
-	background-color: $kdeBgColor  !important;
+		#titlebar {
+			button.vivaldi {
+				color: black;
+				height: 30px;
+				margin-top: 3px;
+			}
 
-	#titlebar {
-		button.vivaldi {
-			color: black;
-			height: 30px;
-			margin-top: 3px;
+			div.window-buttongroup {
+				padding-right: 0;
+				//padding-top: 3px;
+				padding-top: 5px;
+
+				>button {
+					background-color: transparent;
+					width: 16px;
+					height: 16px;
+
+					svg {
+						display: none;
+					}
+
+					margin-right: 5px;
+				}
+
+				>button.window-minimize {
+					background-image: url('./images/minimize.png');
+					background-size: cover;
+
+					&:hover {
+						background-image: url('./images/minimize_hover.png');
+					}
+				}
+
+				>button.window-maximize {
+					background-image: url('./images/maximize.png');
+					background-size: cover;
+
+					&:hover {
+						background-image: url('./images/maximize_hover.png');
+					}
+				}
+
+				>button.window-close {
+					background-image: url('./images/close.png');
+					background-size: cover;
+
+					&:hover {
+						background-image: url('./images/close_hover.png');
+					}
+				}
+			}
 		}
 
-		div.window-buttongroup {
-			padding-right: 0;
-			//padding-top: 3px;
-			padding-top: 5px;
+		#tabs-tabbar-container {
+			padding-top: 5px; // original value is maybe if you use native window titlebar?
+			height: $tabHeight  !important;
 
-			>button {
-				background-color: transparent;
-				width: 16px;
-				height: 16px;
+			#tabs-container {
+				min-height: $tabHeight;
 
-				svg {
-					display: none;
-				}
+				// Contains all tabs 
+				div.resize {
 
-				margin-right: 5px;
-			}
+					//border-bottom: 2px solid rgba(0,0,0, 0.3);
+					div.tab-strip {
+						$borderColor: rgba(0, 0, 0, 0.25);
 
-			>button.window-minimize {
-				background-image: url('./images/minimize.png');
-				background-size: cover;
+						// Tab container element
+						>span {
+							margin-right: -5px;
 
-				&:hover {
-					background-image: url('./images/minimize_hover.png');
-				}
-			}
+							&:first-of-type {
+								div.tab {
+									border-top-left-radius: 5px !important;
+									border-left: 2px solid $borderColor;
 
-			>button.window-maximize {
-				background-image: url('./images/maximize.png');
-				background-size: cover;
-
-				&:hover {
-					background-image: url('./images/maximize_hover.png');
-				}
-			}
-
-			>button.window-close {
-				background-image: url('./images/close.png');
-				background-size: cover;
-
-				&:hover {
-					background-image: url('./images/close_hover.png');
-				}
-			}
-		}
-	}
-
-	#tabs-tabbar-container {
-		padding-top: 5px; // original value is maybe if you use native window titlebar?
-		height: $tabHeight  !important;
-
-		#tabs-container {
-			min-height: $tabHeight;
-
-			// Contains all tabs 
-			div.resize {
-
-				//border-bottom: 2px solid rgba(0,0,0, 0.3);
-				div.tab-strip {
-					$borderColor: rgba(0, 0, 0, 0.25);
-
-					// Tab container element
-					>span {
-						margin-right: -5px;
-
-						&:first-of-type {
-							div.tab {
-								border-top-left-radius: 5px !important;
-								border-left: 2px solid $borderColor;
-
-								&.active {
-									border-top-left-radius: 0 !important;
-									border-left: 2px solid transparent;
+									&.active {
+										border-top-left-radius: 0 !important;
+										border-left: 2px solid transparent;
+									}
 								}
 							}
-						}
 
-						&:last-of-type {
-							div.tab {
-								border-top-right-radius: 5px !important;
+							&:last-of-type {
+								div.tab {
+									border-top-right-radius: 5px !important;
+								}
 							}
-						}
 
-						div.tab-position {
-							height: $tabHeight;
-							margin-right: -3px;
-							width: calc(var(--Width) + 1px);
+							div.tab-position {
+								height: $tabHeight;
+								margin-right: -3px;
+								width: calc(var(--Width) + 1px);
 
-							div.tab {
-								$inactiveTabBg: #cbccce;
+								div.tab {
+									$inactiveTabBg: #cbccce;
+									$accentHeight: 3px;
+									$activePaddingTop: 1px;
+									$inactivePaddingTop: ($accentHeight + $activePaddingTop) - 1px;
 
-								border-radius: 0;
-								padding-top: 2px;
-								color: #000;
-								background-color: $inactiveTabBg;
-								border-top: 1px solid $borderColor;
-								border-right: 2px solid $borderColor;
-								transition: all 100ms ease;
-								border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+									border-radius: 0;
+									padding-top: $inactivePaddingTop;
+									color: #000;
+									background-color: $inactiveTabBg;
+									border-top: 1px solid $borderColor;
+									border-right: 2px solid $borderColor;
+									border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+									transition: background-color 100ms ease;
 
-								&:hover {
-									background-color: lighten($inactiveTabBg, 5%);
-								}
+									&:hover {
+										background-color: lighten($inactiveTabBg, 5%);
+									}
 
-								&.active {
-									padding-top: 0;
-									border-top: 3px solid $accent;
-									background-color: $kdeBgColor;
-									border-bottom-color: transparent;
-								}
+									&.active {
+										padding-top: $activePaddingTop;
+										border-top: $accentHeight solid $accent;
+										background-color: $kdeBgColor;
+										border-bottom-color: transparent;
+									}
 
-								div.tab-header {
-									flex: 0 0 $tabHeight;
-									padding-top: 2px;
-									padding-bottom: 6px;
+									div.tab-header {
+										flex: 0 0 $tabHeight;
+										padding-top: 2px;
+										padding-bottom: 6px;
 
-									span.favicon {}
+										span.favicon {}
 
-									span.title {
-										margin-top: -1px;
+										span.title {
+											margin-top: -1px;
+										}
+									}
+
+									.tab-audio {
+										top: 3px;
 									}
 								}
 							}
@@ -136,28 +144,102 @@
 					}
 				}
 			}
+
+			div.toolbar {
+				justify-content: start;
+
+				button {
+					color: black;
+					opacity: 1;
+					border: 2px solid transparent;
+					border-radius: $borderRadius;
+					min-width: auto !important;
+					min-height: auto !important;
+
+					&:hover {
+						border: 2px solid $accent;
+					}
+				}
+
+				div.newtab {
+					margin-left: 2px;
+					button {
+						margin-top: 2px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#browser.theme-dark {
+	#header {
+		background-color: $kdeBgDarkColor !important;
+
+		#titlebar {
+			button.vivaldi {
+				color: $darkWhite;
+				height: 30px;
+				margin-top: 3px;
+			}
+
+			div.window-buttongroup {
+				>button.window-minimize {
+					background-image: url('./images/minimize_dark.png');
+
+					&:hover {
+						background-image: url('./images/minimize_hover_dark.png');
+					}
+				}
+
+				>button.window-maximize {
+					background-image: url('./images/maximize_dark.png');
+
+					&:hover {
+						background-image: url('./images/maximize_hover_dark.png');
+					}
+				}
+
+				>button.window-close {
+					background-image: url('./images/close_dark.png');
+
+					&:hover {
+						background-image: url('./images/close_dark_hover.png');
+					}
+				}
+			}
 		}
 
-		div.toolbar {
-			justify-content: start;
+		#tabs-tabbar-container {
+			#tabs-container {
+				div.resize {
+					div.tab-strip {
+						>span { 
+							div.tab-position {
+								div.tab {
+									$inactiveTabBg: darken($kdeBgDarkColor, 5%);
 
-			button {
-				color: black;
-				opacity: 1;
-				border: 2px solid transparent;
-				border-radius: $borderRadius;
-				min-width: auto !important;
-				min-height: auto !important;
+									color: darken(#fff, 25%);
+									background-color: $inactiveTabBg;
 
-				&:hover {
-					border: 2px solid $accent;
+									&:hover {
+										background-color: lighten($inactiveTabBg, 10%);
+									}
+
+									&.active {
+										color: darken(#fff, 10%);
+										background-color: $kdeBgDarkColor;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 
-			div.newtab {
-				margin-left: 2px;
+			div.toolbar {
 				button {
-					margin-top: 2px;
+					color: $darkWhite;
 				}
 			}
 		}

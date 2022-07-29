@@ -1,23 +1,47 @@
-
-#modal-bg {
-	$transparentBg: rgba(255,255,255, 0.85);
-	box-shadow: 0px 0px 6px 3px rgba(0,0,0, 0.33);
-	
-	> div {
-		background-color: transparent !important;
-		backdrop-filter: blur(10px);
-
-		div.quick-command-container {
+#browser {
+	#modal-bg {
+		box-shadow: 0px 0px 6px 3px rgba(0,0,0, 0.33);
+		
+		> div {
 			background-color: transparent !important;
+			backdrop-filter: blur(10px);
 
-			div.quick-commands {
-				background-color: $transparentBg !important;
-				backdrop-filter: blur(10px);
+			div.quick-command-container {
+				background-color: transparent !important;
+
+				div.quick-commands {
+					background-color: rgba(255,255,255, 0.85) !important;
+					backdrop-filter: blur(10px);
+				}
+
+				div.qc-entry {
+					background-color: rgba(255,255,255, 0.9) !important;
+					backdrop-filter: blur(10px);
+				}
 			}
+		}
+	}
+}
 
-			div.qc-entry {
-				background-color: rgba(255,255,255, 0.9) !important;
-				backdrop-filter: blur(10px);
+#browser.theme-dark {
+	#modal-bg {
+		box-shadow: none;
+		> div {
+			box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 33%);
+			background-color: transparent !important;
+			animation: dropfade 250ms ease-in-out; //cubic-bezier(0.2, 0.9, 0.6, 1);
+
+			div.quick-command-container {
+				background-color: transparent !important;
+				color: $darkWhite;
+			
+				div.quick-commands {
+					background-color: rgba(0,0,0, 0.75) !important;
+				}
+
+				div.qc-entry {
+					background-color: rgba(0,0,0, 0.8) !important;
+				}
 			}
 		}
 	}

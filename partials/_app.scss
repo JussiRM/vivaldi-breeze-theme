@@ -1,5 +1,12 @@
+@import "./variables";
+
 div#browser {
-	border: 2px solid lighten(black, 40%);
+	font-family: $fontFamily  !important;
+	border: 1px solid lighten(black, 33%);
+
+	input {
+		font-family: $fontFamily !important;
+	}
 
 	&.maximized {
 		border-width: 0;
