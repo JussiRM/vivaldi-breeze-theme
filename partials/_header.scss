@@ -55,20 +55,20 @@
 				}
 			}
 		}
-
+		
+		$borderColor: rgba(0, 0, 0, 0.25);
 		#tabs-tabbar-container {
 			padding-top: 5px; // original value is maybe if you use native window titlebar?
 			height: $tabHeight  !important;
+			//border-bottom: 1px solid $borderColor;
+			margin-bottom: 1px;
 
 			#tabs-container {
 				min-height: $tabHeight;
 
 				// Contains all tabs 
 				div.resize {
-
-					//border-bottom: 2px solid rgba(0,0,0, 0.3);
 					div.tab-strip {
-						$borderColor: rgba(0, 0, 0, 0.25);
 
 						// Tab container element
 						>span {
@@ -102,14 +102,14 @@
 									$accentHeight: 3px;
 									$activePaddingTop: 1px;
 									$inactivePaddingTop: ($accentHeight + $activePaddingTop) - 1px;
-
+									
 									border-radius: 0;
 									padding-top: $inactivePaddingTop;
 									color: #000;
 									background-color: $inactiveTabBg;
 									border-top: 1px solid $borderColor;
 									border-right: 2px solid $borderColor;
-									border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+									border-bottom: 1px solid $borderColor;
 									transition: background-color 100ms ease;
 
 									&:hover {
@@ -117,6 +117,7 @@
 									}
 
 									&.active {
+										margin-bottom: -1px;
 										padding-top: $activePaddingTop;
 										border-top: $accentHeight solid $accent;
 										background-color: $kdeBgColor;

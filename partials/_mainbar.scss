@@ -5,6 +5,9 @@ $toolbarBgDark: linear-gradient(180deg, #31363b, darken(#31363b, 0%));
 
 #browser {
 	#main {
+		// Fix 1px gap between header and mainbar...
+		margin-top: -1px;
+
 		div.mainbar {
 			div.toolbar {
 				color: black;
@@ -116,7 +119,7 @@ $toolbarBgDark: linear-gradient(180deg, #31363b, darken(#31363b, 0%));
 				}
 
 				div.UrlBar-PrivateWindowIndicator {
-					color: purple;
+					color: darken($accent, 25%);
 				}
 			}
 		}
@@ -162,6 +165,10 @@ $toolbarBgDark: linear-gradient(180deg, #31363b, darken(#31363b, 0%));
 					button {
 						color: $darkWhite;
 					}
+				}
+
+				div.UrlBar-PrivateWindowIndicator {
+					color: $accent;
 				}
 			}
 		}
