@@ -1,0 +1,23 @@
+{
+  "name": "vivaldi-kde-breeze-theme",
+  "version": "1.0.0",
+  "description": "UI Modification that makes the browser look more like a KDE app.",
+  "main": "none",
+  "scripts": {
+    "build": "sass kubuntu.scss:kubuntu.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JussiRM/vivaldi-kubuntu-theme.git"
+  },
+  "keywords": [
+    "vivaldi",
+    "modification"
+  ],
+  "author": "Jussi Laitinen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JussiRM/vivaldi-kubuntu-theme/issues"
+  },
+  "homepage": "https://github.com/JussiRM/vivaldi-kubuntu-theme#readme"
+}

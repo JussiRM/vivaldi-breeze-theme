@@ -1,4 +1,5 @@
 @import "./variables";
+
 #browser {
 	#header {
 		background-color: $kdeBgColor  !important;
@@ -17,8 +18,13 @@
 
 				>button {
 					background-color: transparent;
-					width: 16px;
-					height: 16px;
+					width: 16px !important;
+					height: 16px !important;
+					background-color: transparent !important;
+
+					&:hover {
+						background-image: transparent !important;
+					}
 
 					svg {
 						display: none;
@@ -65,6 +71,11 @@
 
 			#tabs-container {
 				min-height: $tabHeight;
+				// &:not(.none).top {
+				// 	padding-right: 90px !important;
+				// }
+
+				
 
 				// Contains all tabs 
 				div.resize {

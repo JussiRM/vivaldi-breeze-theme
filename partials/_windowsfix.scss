@@ -1,0 +1,15 @@
+/*
+	Some windows-specific fixes so that the theme works on windows too!
+
+*/
+
+#browser.win10 {
+	#header #titlebar .window-buttongroup {
+		padding-top: 10px !important;
+		padding-right: 5px !important;
+	}
+
+	#tabs-container:not(.none).top {
+		padding-right: 90px !important;
+	}
+}
