@@ -1,8 +1,18 @@
 @import "./variables";
 
+$appWindowBorder: lighten(black, 33%);
+
+body {
+	// Border will be missing from the right side if this isn't set.
+	border-right: 1px solid $appWindowBorder;
+}
+
+div#app {
+	border: 1px solid $appWindowBorder;
+}
+
 div#browser {
 	font-family: $fontFamily  !important;
-	border: 1px solid lighten(black, 33%);
 
 	input {
 		font-family: $fontFamily !important;
