@@ -1,8 +1,8 @@
-# KDE Breeze Theme
+# KDE Breeze Theme for Vivaldi
 
 ![Screenshot](/screenshots/screenshot1.jpg?raw=true)
 
-A vivaldi UI modification that tries to mimick the look & feel of KDE Breeze theme.
+A Vivaldi UI modification that tries to mimick the look & feel of KDE Breeze theme.
 Works with light and dark theme.
 
 ## How to use?
