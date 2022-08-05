@@ -167,6 +167,7 @@
 					border-radius: $borderRadius;
 					min-width: auto !important;
 					min-height: auto !important;
+					transition: all 100ms ease;
 
 					&:hover {
 						border: 2px solid $accent;

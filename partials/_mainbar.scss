@@ -1,14 +1,17 @@
 @import "./variables";
 
-$toolbarBg: linear-gradient(180deg, rgba(222, 224, 226, 1) 0%, rgba(239, 240, 241, 1) 100%);
-$toolbarBgDark: linear-gradient(180deg, #31363b, darken(#31363b, 0%));
+$toolbarBg: linear-gradient(180deg, $mainToolbarBgStart 0%, $mainToolbarBgEnd 100%);
+$toolbarBgDark: linear-gradient(180deg, $mainToolbarBgDarkStart, $mainToolbarBgDarkEnd);
 
 #browser {
 	#main {
 		// Fix 1px gap between header and mainbar...
-		margin-top: -1px;
+		// Edit: Doesnt seem necessary any longer... ? 
+		// margin-top: -1px;
 
 		div.mainbar {
+			//margin-top: -1px;
+			
 			div.toolbar {
 				color: black;
 				height: 38px;
@@ -105,6 +108,7 @@ $toolbarBgDark: linear-gradient(180deg, #31363b, darken(#31363b, 0%));
 					button {
 						border: 2px solid transparent;
 						border-radius: $borderRadius;
+						transition: all 100ms ease;
 						&:hover {
 							background-color: transparent !important;
 							border: 2px solid $accent;

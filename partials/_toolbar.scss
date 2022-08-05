@@ -1,0 +1,42 @@
+@import "./variables";
+
+#browser {
+	div.toolbar-statusbar {
+		background-color: $kdeBgColorLighter;
+
+		div.page-zoom-controls {
+			input[type=range] {
+				appearance: none;
+				background: transparent;
+
+				&::-webkit-slider-thumb {
+					appearance: none;
+					border-radius: 50%;
+					background-color: #fcfcfc;
+					border: 1px solid darken(#fff, 25%);
+					width: 16px;
+					height: 16px;
+					margin-top: -6px;
+
+					&:focus, &:hover {
+						border: 1px solid $accent;
+					}
+				}
+
+				&::-webkit-slider-runnable-track {
+					width: 100%;
+					height: 6px;
+					border-radius: $borderRadius;
+					border: 1px solid darken(#fff, 25%);
+					background-color: #dbdcdc;
+				}
+			}	
+		}
+	}
+}
+
+#browser.theme-dark {
+	div.toolbar-statusbar {
+		background-color: $kdeBgDarkColor;
+	}
+}

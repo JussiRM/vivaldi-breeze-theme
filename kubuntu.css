@@ -10,17 +10,12 @@
   100% {
     opacity: 1;
     transform: translateY(0) scale(1); } }
-body {
-  border-right: 1px solid #545454; }
-
-div#app {
-  border: 1px solid #545454; }
-
 div#browser {
-  font-family: system-ui, "Noto Sans", ubuntu, sans-serif !important; }
+  font-family: system-ui, "Noto Sans", ubuntu, sans-serif !important;
+  margin-top: 0; }
   div#browser input {
     font-family: system-ui, "Noto Sans", ubuntu, sans-serif !important; }
-  div#browser.maximized {
+  div#browser.maximized, div#browser.native {
     border-width: 0; }
 
 #browser #header {
@@ -110,7 +105,8 @@ div#browser {
         border: 2px solid transparent;
         border-radius: 4px;
         min-width: auto !important;
-        min-height: auto !important; }
+        min-height: auto !important;
+        transition: all 100ms ease; }
         #browser #header #tabs-tabbar-container div.toolbar button:hover {
           border: 2px solid #3daee9; }
       #browser #header #tabs-tabbar-container div.toolbar div.newtab {
@@ -147,71 +143,70 @@ div#browser {
   #browser.theme-dark #header #tabs-tabbar-container div.toolbar button {
     color: #e6e6e6; }
 
-#browser #main {
-  margin-top: -1px; }
-  #browser #main div.mainbar div.toolbar {
+#browser #main div.mainbar div.toolbar {
+  color: black;
+  height: 38px;
+  background: linear-gradient(180deg, #dee0e2 0%, #eff0f1 100%); }
+  #browser #main div.mainbar div.toolbar div.UrlBar-AddressField {
+    background-color: #fff;
     color: black;
-    height: 38px;
-    background: linear-gradient(180deg, #dee0e2 0%, #eff0f1 100%); }
-    #browser #main div.mainbar div.toolbar div.UrlBar-AddressField {
-      background-color: #fff;
-      color: black;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.33);
+    padding: 1px; }
+    #browser #main div.mainbar div.toolbar div.UrlBar-AddressField:focus-within {
+      outline: none !important;
+      border-color: #3daee9;
+      border-width: 2px;
+      padding: 0; }
+    #browser #main div.mainbar div.toolbar div.UrlBar-AddressField .UrlFragment--Lowlight {
+      color: black; }
+    #browser #main div.mainbar div.toolbar div.UrlBar-AddressField .UrlFragment--Highlight {
+      color: black; }
+    #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar {
+      background: none !important; }
+      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar div.pageload progress.pageload-indicator {
+        opacity: 0.25;
+        top: -1px;
+        bottom: 0;
+        height: calc(100% + 1px);
+        right: 0;
+        left: 0;
+        border-radius: 5px;
+        background-color: #3daee9; }
+      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar div.pageload.progress-done progress.pageload-indicator {
+        opacity: 0; }
+    #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown {
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      transition: all 1000ms ease;
+      color: black; }
+      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown label.OmniDropdown-Label {
+        opacity: 0.75;
+        font-weight: bold; }
+      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.omni-clickable:hover {
+        background-color: #3daee9;
+        color: #fff; }
+      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.omni-clickable.OmniLinkItem--Highlighted {
+        background-color: #3daee9; }
+      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.OmniLinkItem span.OmniLinkItem-Url {
+        padding-top: 1px; }
+  #browser #main div.mainbar div.toolbar div.toolbar-extensions {
+    height: 100%;
+    background: none !important;
+    margin-right: 2px; }
+  #browser #main div.mainbar div.toolbar div.button-toolbar {
+    height: 100%; }
+    #browser #main div.mainbar div.toolbar div.button-toolbar button {
+      border: 2px solid transparent;
       border-radius: 4px;
-      border: 1px solid rgba(0, 0, 0, 0.33);
-      padding: 1px; }
-      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField:focus-within {
-        outline: none !important;
-        border-color: #3daee9;
-        border-width: 2px;
-        padding: 0; }
-      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField .UrlFragment--Lowlight {
-        color: black; }
-      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField .UrlFragment--Highlight {
-        color: black; }
-      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar {
-        background: none !important; }
-        #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar div.pageload progress.pageload-indicator {
-          opacity: 0.25;
-          top: -1px;
-          bottom: 0;
-          height: calc(100% + 1px);
-          right: 0;
-          left: 0;
-          border-radius: 5px;
-          background-color: #3daee9; }
-        #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar div.pageload.progress-done progress.pageload-indicator {
-          opacity: 0; }
-      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown {
-        background-color: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(10px);
-        transition: all 1000ms ease;
-        color: black; }
-        #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown label.OmniDropdown-Label {
-          opacity: 0.75;
-          font-weight: bold; }
-        #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.omni-clickable:hover {
-          background-color: #3daee9;
-          color: #fff; }
-        #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.omni-clickable.OmniLinkItem--Highlighted {
-          background-color: #3daee9; }
-        #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.OmniLinkItem span.OmniLinkItem-Url {
-          padding-top: 1px; }
-    #browser #main div.mainbar div.toolbar div.toolbar-extensions {
-      height: 100%;
-      background: none !important;
-      margin-right: 2px; }
-    #browser #main div.mainbar div.toolbar div.button-toolbar {
-      height: 100%; }
-      #browser #main div.mainbar div.toolbar div.button-toolbar button {
-        border: 2px solid transparent;
+      transition: all 100ms ease; }
+      #browser #main div.mainbar div.toolbar div.button-toolbar button:hover {
+        background-color: transparent !important;
+        border: 2px solid #3daee9; }
+      #browser #main div.mainbar div.toolbar div.button-toolbar button[name="AccountButton"] img {
         border-radius: 4px; }
-        #browser #main div.mainbar div.toolbar div.button-toolbar button:hover {
-          background-color: transparent !important;
-          border: 2px solid #3daee9; }
-        #browser #main div.mainbar div.toolbar div.button-toolbar button[name="AccountButton"] img {
-          border-radius: 4px; }
-    #browser #main div.mainbar div.toolbar div.UrlBar-PrivateWindowIndicator {
-      color: #116896; }
+  #browser #main div.mainbar div.toolbar div.UrlBar-PrivateWindowIndicator {
+    color: #116896; }
 
 #browser.theme-dark #main div.mainbar div.toolbar {
   background: linear-gradient(180deg, #31363b, #31363b); }
@@ -232,6 +227,103 @@ div#browser {
 
 .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button {
   border-radius: 0 !important; }
+
+#browser div.toolbar-statusbar {
+  background-color: #eff0f1; }
+  #browser div.toolbar-statusbar div.page-zoom-controls input[type=range] {
+    appearance: none;
+    background: transparent; }
+    #browser div.toolbar-statusbar div.page-zoom-controls input[type=range]::-webkit-slider-thumb {
+      appearance: none;
+      border-radius: 50%;
+      background-color: #fcfcfc;
+      border: 1px solid #bfbfbf;
+      width: 16px;
+      height: 16px;
+      margin-top: -6px; }
+      #browser div.toolbar-statusbar div.page-zoom-controls input[type=range]::-webkit-slider-thumb:focus, #browser div.toolbar-statusbar div.page-zoom-controls input[type=range]::-webkit-slider-thumb:hover {
+        border: 1px solid #3daee9; }
+    #browser div.toolbar-statusbar div.page-zoom-controls input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 6px;
+      border-radius: 4px;
+      border: 1px solid #bfbfbf;
+      background-color: #dbdcdc; }
+
+#browser.theme-dark div.toolbar-statusbar {
+  background-color: #31363b; }
+
+#browser #main div#panels-container {
+  background-color: transparent;
+  background: linear-gradient(180deg, #eff0f1 0%, #eff0f1 100%); }
+  #browser #main div#panels-container div#panels {
+    /*
+    Unsure why vivaldi sets the justify-content to flex-end
+    when opening a web panel.
+    */ }
+    #browser #main div#panels-container div#panels.leak #switch {
+      justify-content: flex-start !important; }
+    #browser #main div#panels-container div#panels div#switch {
+      backdrop-filter: none !important; }
+      #browser #main div#panels-container div#panels div#switch button {
+        margin: 1px;
+        width: calc(100% - 2px);
+        border: 2px solid transparent;
+        transition: all 100ms ease; }
+        #browser #main div#panels-container div#panels div#switch button:not(.active):hover {
+          background-color: transparent;
+          border: 2px solid #3daee9;
+          border-radius: 4px; }
+        #browser #main div#panels-container div#panels div#switch button span {
+          width: 16px;
+          height: 16px; }
+        #browser #main div#panels-container div#panels div#switch button.active {
+          box-shadow: inset -2px 0 0 #3daee9;
+          background-color: rgba(61, 174, 233, 0.2);
+          color: #3daee9 !important; }
+          #browser #main div#panels-container div#panels div#switch button.active svg .small-icon-fill {
+            fill: #3daee9; }
+    #browser #main div#panels-container div#panels div.panel-group input {
+      border-radius: 4px;
+      padding: 5px;
+      box-shadow: none; }
+      #browser #main div#panels-container div#panels div.panel-group input:focus-within {
+        padding: 4px;
+        outline: none !important;
+        border-color: #3daee9;
+        border-width: 2px; }
+    #browser #main div#panels-container div#panels div.panel-group select {
+      border-radius: 4px;
+      padding: 5px; }
+      #browser #main div#panels-container div#panels div.panel-group select:focus-within {
+        padding: 4px;
+        outline: none !important;
+        border-color: #3daee9;
+        border-width: 2px; }
+    #browser #main div#panels-container div#panels div.panel-group div.sortselector-compact {
+      border-radius: 4px; }
+      #browser #main div#panels-container div#panels div.panel-group div.sortselector-compact div.sortselector-area select.sortselector-dropdown {
+        padding: 3px 5px; }
+    #browser #main div#panels-container div#panels div.panel-group div.toolbar-group > div > button {
+      border-radius: 0; }
+    #browser #main div#panels-container div#panels div.panel-group div.toolbar-group > div:first-of-type > button {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px; }
+    #browser #main div#panels-container div#panels div.panel-group div.toolbar-group > div:last-of-type > button {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px; }
+    #browser #main div#panels-container div#panels div.panel-group div.button-toolbar > button {
+      border-radius: 4px; }
+    #browser #main div#panels-container div#panels div.panel-group div.vivaldi-tree div.tree-row {
+      border-radius: 4px; }
+      #browser #main div#panels-container div#panels div.panel-group div.vivaldi-tree div.tree-row.tree-row-selected {
+        background-color: #3daee9;
+        box-shadow: none;
+        color: #fff;
+        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.33); }
+
+#browser.theme-dark #main div#panels-container {
+  background: linear-gradient(180deg, #31363b 0%, #31363b 100%); }
 
 #browser #modal-bg {
   box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.33); }
@@ -262,7 +354,7 @@ div#browser {
         background-color: rgba(0, 0, 0, 0.8) !important; }
 
 #browser #webpage-stack nav.startpage-navigation {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(10px); }
   #browser #webpage-stack nav.startpage-navigation .startpage-navigation-group:last-of-type {
     border-left-width: 0; }

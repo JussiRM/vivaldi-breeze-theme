@@ -2,23 +2,22 @@
 
 $appWindowBorder: lighten(black, 33%);
 
-body {
-	// Border will be missing from the right side if this isn't set.
-	border-right: 1px solid $appWindowBorder;
-}
-
-div#app {
-	border: 1px solid $appWindowBorder;
-}
-
 div#browser {
 	font-family: $fontFamily  !important;
+
+	// Window border
+	//margin: 1px;
+	margin-top: 0;
+	
+	// inconsistent behavior with different size windows, so disabling it.
+	// might be only if desktop cale is eg. 125% on high dpi displays.
+	// border: 1px solid $appWindowBorder;
 
 	input {
 		font-family: $fontFamily !important;
 	}
 
-	&.maximized {
+	&.maximized, &.native {
 		border-width: 0;
 	}
 }

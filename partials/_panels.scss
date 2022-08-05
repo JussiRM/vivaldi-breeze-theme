@@ -1,0 +1,136 @@
+@import "./variables";
+
+#browser {
+	#main {
+		div#panels-container {
+			background-color: transparent;
+			background: linear-gradient(180deg, $mainToolbarBgEnd 0%, $kdeBgColorLighter 100%);
+
+			div#panels {
+				/*
+				Unsure why vivaldi sets the justify-content to flex-end
+				when opening a web panel.
+				*/
+				&.leak #switch {
+					justify-content: flex-start !important;
+				}
+
+				div#switch {
+					backdrop-filter: none !important;
+
+					button {
+						margin: 1px;
+						width: calc(100% - 2px);
+						border: 2px solid transparent;
+						transition: all 100ms ease;
+
+						&:not(.active):hover {
+							background-color: transparent;
+							border: 2px solid $accent;
+							border-radius: $borderRadius;
+						}
+
+						span {
+							width: 16px;
+							height: 16px;
+						}
+
+						&.active {
+							box-shadow: inset -2px 0 0 $accent;
+							background-color: rgba($accent, 0.2);
+							color: $accent !important;
+
+							svg .small-icon-fill {
+								fill: $accent;
+							}
+						}
+					}
+				}
+
+				div.panel-group {
+					input {
+						border-radius: $borderRadius;
+						padding: 5px;
+						box-shadow: none;
+
+						&:focus-within {
+							padding: 4px;
+							outline: none !important;
+							border-color: $accent;
+							border-width: 2px;
+						}
+					}
+
+					select {
+						border-radius: $borderRadius;
+						padding: 5px;
+
+						&:focus-within {
+							padding: 4px;
+							outline: none !important;
+							border-color: $accent;
+							border-width: 2px;
+						}
+					}
+
+					div.sortselector-compact {
+						border-radius: $borderRadius;
+
+						div.sortselector-area {
+							select.sortselector-dropdown {
+								padding: 3px 5px;
+							}
+						}
+					}
+
+					div.toolbar-group {
+						> div {
+							> button {
+								border-radius: 0;
+							}
+							&:first-of-type {
+								> button {
+									border-top-left-radius: $borderRadius;
+									border-bottom-left-radius: $borderRadius;
+								}
+							}
+							&:last-of-type {
+								> button {
+									border-top-right-radius: $borderRadius;
+									border-bottom-right-radius: $borderRadius;
+								}
+							}
+						}
+					}
+
+					div.button-toolbar {
+						> button {
+							border-radius: $borderRadius;
+						}
+					}
+
+					div.vivaldi-tree {
+						div.tree-row {
+							border-radius: $borderRadius;
+
+							&.tree-row-selected {
+								background-color: $accent;
+								box-shadow: none;
+								color: #fff;
+								text-shadow: 0px 0px 1px rgba(0,0,0, 0.33);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#browser.theme-dark {
+	#main {
+		div#panels-container {
+			background: linear-gradient(180deg, $mainToolbarBgDarkStart 0%, $mainToolbarBgDarkEnd 100%);
+		}
+	}
+}
