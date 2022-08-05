@@ -26,3 +26,7 @@ Open a new window with Ctrl+N and the theme should be enabled.
 
 - Lot of normal theming options in Vivaldi settings don't work with this theme enabled.
 - Vivaldi updates may break the theme if they change classnames/elements.
+
+## Disable Theme
+
+Simply remove the path from Vivaldi settings (Custom UI Modifications), then open a new window.
