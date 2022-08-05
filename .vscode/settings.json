@@ -3,7 +3,7 @@
         "commands": [
             {
                 "match": ".*\\.scss",
-                "cmd": "scss kubuntu.scss:kubuntu.css"
+                "cmd": "npm run build"
             }
         ]
     }

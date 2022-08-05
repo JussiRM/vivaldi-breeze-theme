@@ -4,7 +4,7 @@
   "description": "UI Modification that makes the browser look more like a KDE app.",
   "main": "none",
   "scripts": {
-    "build": "sass kubuntu.scss:kubuntu.css"
+    "build": "sass breeze.scss:breeze.css"
   },
   "repository": {
     "type": "git",
