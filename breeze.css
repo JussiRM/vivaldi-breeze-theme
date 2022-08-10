@@ -55,7 +55,8 @@ div#browser {
   #browser #header #tabs-tabbar-container {
     padding-top: 5px;
     height: 28px !important;
-    margin-bottom: 1px; }
+    margin-bottom: 1px;
+    background-color: #dee0e2 !important; }
     #browser #header #tabs-tabbar-container #tabs-container {
       min-height: 28px; }
       #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span {
@@ -132,16 +133,18 @@ div#browser {
     background-image: url("./images/close_dark.png"); }
     #browser.theme-dark #header #titlebar div.window-buttongroup > button.window-close:hover {
       background-image: url("./images/close_dark_hover.png"); }
-  #browser.theme-dark #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab {
-    color: #bfbfbf;
-    background-color: #25292d; }
-    #browser.theme-dark #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab:hover {
-      background-color: #3d4349; }
-    #browser.theme-dark #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab.active {
-      color: #e6e6e6;
-      background-color: #31363b; }
-  #browser.theme-dark #header #tabs-tabbar-container div.toolbar button {
-    color: #e6e6e6; }
+  #browser.theme-dark #header #tabs-tabbar-container {
+    background-color: #31363b !important; }
+    #browser.theme-dark #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab {
+      color: #bfbfbf;
+      background-color: #25292d; }
+      #browser.theme-dark #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab:hover {
+        background-color: #3d4349; }
+      #browser.theme-dark #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab.active {
+        color: #e6e6e6;
+        background-color: #31363b; }
+    #browser.theme-dark #header #tabs-tabbar-container div.toolbar button {
+      color: #e6e6e6; }
 
 #browser #main div.mainbar div.toolbar {
   color: black;

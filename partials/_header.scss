@@ -68,6 +68,7 @@
 			height: $tabHeight  !important;
 			//border-bottom: 1px solid $borderColor;
 			margin-bottom: 1px;
+			background-color: $kdeBgColor  !important;
 
 			#tabs-container {
 				min-height: $tabHeight;
@@ -224,6 +225,8 @@
 		}
 
 		#tabs-tabbar-container {
+			background-color: $kdeBgDarkColor  !important;
+
 			#tabs-container {
 				div.resize {
 					div.tab-strip {
