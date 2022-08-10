@@ -1,13 +1,24 @@
+// Accent Color
 $accent: #3daee9;
 
+// Misc
+$borderRadius: 4px;
 $fontFamily: system-ui, "Noto Sans", ubuntu, sans-serif;
 $tabHeight: 28px;
+$darkWhite: darken(#fff, 10%);
+
+// Header colors 
 $kdeBgColor: #dee0e2;
+$kdeBgColorInactive: #eff0f1;
 $kdeBgColorLighter: #eff0f1;
 $kdeBgDarkColor: #31363b;
-$borderRadius: 4px;
-$darkWhite: darken(#fff, 10%);
-$mainToolbarBgStart: rgba(222, 224, 226, 1);
-$mainToolbarBgEnd: rgba(239, 240, 241, 1);
-$mainToolbarBgDarkStart: #31363b;
-$mainToolbarBgDarkEnd: #31363b;
+$kdeBgDarkColorInactive: #31363b;
+$mainToolbar: #dee0e2;
+$mainToolbarInactive: #eff0f1;
+$mainToolbarDark: #31363b;
+$mainToolbarDarkInactive: #31363b;
+
+// $mainToolbarBgStart: rgba(222, 224, 226, 1);
+// $mainToolbarBgEnd: rgba(239, 240, 241, 1);
+// $mainToolbarBgDarkStart: #31363b;
+// $mainToolbarBgDarkEnd: #31363b;

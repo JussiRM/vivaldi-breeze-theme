@@ -1,8 +1,20 @@
 @import "./variables";
 
+#browser.hasfocus {
+	#header {
+		background-color: $kdeBgColor !important;
+	}
+	
+	&.theme-dark {
+		#header {
+			background-color: $kdeBgDarkColor !important;
+		}
+	}
+}
+
 #browser {
 	#header {
-		background-color: $kdeBgColor  !important;
+		background-color: $kdeBgColorInactive !important;
 
 		#titlebar {
 			button.vivaldi {
@@ -68,7 +80,7 @@
 			height: $tabHeight  !important;
 			//border-bottom: 1px solid $borderColor;
 			margin-bottom: 1px;
-			background-color: $kdeBgColor  !important;
+			background-color: transparent !important;
 
 			#tabs-container {
 				min-height: $tabHeight;
@@ -132,7 +144,7 @@
 										margin-bottom: -1px;
 										padding-top: $activePaddingTop;
 										border-top: $accentHeight solid $accent;
-										background-color: $kdeBgColor;
+										background-color: transparent; //$kdeBgColor;
 										border-bottom-color: transparent;
 									}
 

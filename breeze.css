@@ -18,8 +18,13 @@ div#browser {
   div#browser.maximized, div#browser.native {
     border-width: 0; }
 
-#browser #header {
+#browser.hasfocus #header {
   background-color: #dee0e2 !important; }
+#browser.hasfocus.theme-dark #header {
+  background-color: #31363b !important; }
+
+#browser #header {
+  background-color: #eff0f1 !important; }
   #browser #header #titlebar button.vivaldi {
     color: black;
     height: 30px;
@@ -56,7 +61,7 @@ div#browser {
     padding-top: 5px;
     height: 28px !important;
     margin-bottom: 1px;
-    background-color: #dee0e2 !important; }
+    background-color: transparent !important; }
     #browser #header #tabs-tabbar-container #tabs-container {
       min-height: 28px; }
       #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span {
@@ -88,7 +93,7 @@ div#browser {
               margin-bottom: -1px;
               padding-top: 1px;
               border-top: 3px solid #3daee9;
-              background-color: #dee0e2;
+              background-color: transparent;
               border-bottom-color: transparent; }
             #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab div.tab-header {
               flex: 0 0 28px;
@@ -146,10 +151,15 @@ div#browser {
     #browser.theme-dark #header #tabs-tabbar-container div.toolbar button {
       color: #e6e6e6; }
 
+#browser.hasfocus #main div.mainbar div.toolbar {
+  background: #dee0e2; }
+#browser.hasfocus.theme-dark #main div.mainbar div.toolbar {
+  background: #31363b; }
+
 #browser #main div.mainbar div.toolbar {
   color: black;
   height: 38px;
-  background: linear-gradient(180deg, #dee0e2 0%, #eff0f1 100%); }
+  background: #eff0f1; }
   #browser #main div.mainbar div.toolbar div.UrlBar-AddressField {
     background-color: #fff;
     color: black;
@@ -212,7 +222,7 @@ div#browser {
     color: #116896; }
 
 #browser.theme-dark #main div.mainbar div.toolbar {
-  background: linear-gradient(180deg, #31363b, #31363b); }
+  background: #31363b; }
   #browser.theme-dark #main div.mainbar div.toolbar div.UrlBar-AddressField {
     background-color: #1b1e20;
     color: #fff; }
@@ -256,9 +266,13 @@ div#browser {
 #browser.theme-dark div.toolbar-statusbar {
   background-color: #31363b; }
 
+#browser.hasfocus #main div#panels-container {
+  background-color: #dee0e2; }
+#browser.hasfocus.theme-dark #main div#panels-container {
+  background-color: #31363b; }
+
 #browser #main div#panels-container {
-  background-color: transparent;
-  background: linear-gradient(180deg, #eff0f1 0%, #eff0f1 100%); }
+  background-color: #eff0f1; }
   #browser #main div#panels-container div#panels {
     /*
     Unsure why vivaldi sets the justify-content to flex-end
@@ -326,7 +340,7 @@ div#browser {
         text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.33); }
 
 #browser.theme-dark #main div#panels-container {
-  background: linear-gradient(180deg, #31363b 0%, #31363b 100%); }
+  background-color: #31363b; }
 
 #browser #modal-bg {
   box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.33); }

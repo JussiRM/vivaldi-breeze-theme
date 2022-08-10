@@ -1,10 +1,25 @@
 @import "./variables";
 
+#browser.hasfocus {
+	#main {
+		div#panels-container {
+			background-color: $mainToolbar;
+		}
+	}
+
+	&.theme-dark {
+		#main {
+			div#panels-container {
+				background-color: $mainToolbarDark;
+			}
+		}
+	}
+}
+
 #browser {
 	#main {
 		div#panels-container {
-			background-color: transparent;
-			background: linear-gradient(180deg, $mainToolbarBgEnd 0%, $kdeBgColorLighter 100%);
+			background-color: $mainToolbarInactive;
 
 			div#panels {
 				/*
@@ -130,7 +145,7 @@
 #browser.theme-dark {
 	#main {
 		div#panels-container {
-			background: linear-gradient(180deg, $mainToolbarBgDarkStart 0%, $mainToolbarBgDarkEnd 100%);
+			background-color: $mainToolbarDarkInactive;
 		}
 	}
 }

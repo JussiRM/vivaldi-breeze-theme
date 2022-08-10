@@ -1,7 +1,27 @@
 @import "./variables";
 
-$toolbarBg: linear-gradient(180deg, $mainToolbarBgStart 0%, $mainToolbarBgEnd 100%);
-$toolbarBgDark: linear-gradient(180deg, $mainToolbarBgDarkStart, $mainToolbarBgDarkEnd);
+// $toolbarBg: linear-gradient(180deg, $mainToolbarBgStart 0%, $mainToolbarBgEnd 100%);
+// $toolbarBgDark: linear-gradient(180deg, $mainToolbarBgDarkStart, $mainToolbarBgDarkEnd);
+
+#browser.hasfocus {
+	#main {
+		div.mainbar {
+			div.toolbar {
+				background: $mainToolbar;
+			}
+		}
+	}
+
+	&.theme-dark {
+		#main {
+			div.mainbar {
+				div.toolbar {
+					background: $mainToolbarDark;
+				}
+			}
+		}
+	}
+}
 
 #browser {
 	#main {
@@ -16,7 +36,7 @@ $toolbarBgDark: linear-gradient(180deg, $mainToolbarBgDarkStart, $mainToolbarBgD
 				color: black;
 				height: 38px;
 				//background-color: #eff0f1 !important;
-				background: $toolbarBg;
+				background: $mainToolbarInactive;
 
 				div.UrlBar-AddressField {
 					background-color: #fff;
@@ -134,7 +154,7 @@ $toolbarBgDark: linear-gradient(180deg, $mainToolbarBgDarkStart, $mainToolbarBgD
 	#main {
 		div.mainbar {
 			div.toolbar {
-				background: $toolbarBgDark;
+				background: $mainToolbarDark;
 
 				div.UrlBar-AddressField {
 					$addressBarDarkBg: #1b1e20;
