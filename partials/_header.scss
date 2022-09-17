@@ -3,6 +3,24 @@
 #browser.hasfocus {
 	#header {
 		background-color: $kdeBgColor !important;
+
+		#tabs-tabbar-container {
+			#tabs-container {
+				div.resize {
+					div.tab-strip {
+						> span {
+							div.tab-position {
+								div.tab {
+									&.active {
+										background-color: $kdeBgColor;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	&.theme-dark {
@@ -144,7 +162,7 @@
 										margin-bottom: -1px;
 										padding-top: $activePaddingTop;
 										border-top: $accentHeight solid $accent;
-										background-color: transparent; //$kdeBgColor;
+										background-color: $kdeBgColorInactive;
 										border-bottom-color: transparent;
 									}
 

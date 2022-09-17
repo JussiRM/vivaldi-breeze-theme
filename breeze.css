@@ -20,6 +20,8 @@ div#browser {
 
 #browser.hasfocus #header {
   background-color: #dee0e2 !important; }
+  #browser.hasfocus #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab.active {
+    background-color: #dee0e2; }
 #browser.hasfocus.theme-dark #header {
   background-color: #31363b !important; }
 
@@ -93,7 +95,7 @@ div#browser {
               margin-bottom: -1px;
               padding-top: 1px;
               border-top: 3px solid #3daee9;
-              background-color: transparent;
+              background-color: #eff0f1;
               border-bottom-color: transparent; }
             #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab div.tab-header {
               flex: 0 0 28px;
