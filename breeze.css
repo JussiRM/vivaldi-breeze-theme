@@ -198,6 +198,13 @@ div#browser.maximized, div#browser.native {
 #browser.theme-dark #header #tabs-tabbar-container {
   background-color: #31363b !important;
 }
+#browser.theme-dark #header #tabs-tabbar-container #tabs-container div.tabbar-workspace-button {
+  background-color: #31363b;
+  color: #e6e6e6;
+}
+#browser.theme-dark #header #tabs-tabbar-container #tabs-container div.tabbar-workspace-button button:hover {
+  background-color: #485057;
+}
 #browser.theme-dark #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab {
   color: #bfbfbf;
   background-color: #25292d;

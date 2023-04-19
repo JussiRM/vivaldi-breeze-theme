@@ -267,6 +267,18 @@
 			background-color: $kdeBgDarkColor  !important;
 
 			#tabs-container {
+
+				div.tabbar-workspace-button {
+					background-color: $kdeBgDarkColor;
+					color: darken(#fff, 10%);
+
+					button {
+						&:hover {
+							background-color: lighten($kdeBgDarkColor, 10%);
+						}
+					}
+				}			
+
 				div.resize {
 					div.tab-strip {
 						>span { 
