@@ -4,394 +4,529 @@
 @keyframes dropfade {
   0% {
     opacity: 0;
-    transform: scale(0.75); }
+    transform: scale(0.75);
+  }
   80% {
-    transform: scale(1.05); }
+    transform: scale(1.05);
+  }
   100% {
     opacity: 1;
-    transform: translateY(0) scale(1); } }
+    transform: translateY(0) scale(1);
+  }
+}
 div#browser {
   font-family: system-ui, "Noto Sans", ubuntu, sans-serif !important;
-  margin-top: 0; }
-  div#browser input {
-    font-family: system-ui, "Noto Sans", ubuntu, sans-serif !important; }
-  div#browser.maximized, div#browser.native {
-    border-width: 0; }
+  margin-top: 0;
+}
+div#browser input {
+  font-family: system-ui, "Noto Sans", ubuntu, sans-serif !important;
+}
+div#browser.maximized, div#browser.native {
+  border-width: 0;
+}
 
 #browser.hasfocus #header {
-  background-color: #dee0e2 !important; }
-  #browser.hasfocus #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab.active {
-    background-color: #dee0e2; }
+  background-color: #dee0e2 !important;
+}
+#browser.hasfocus #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab.active {
+  background-color: #dee0e2;
+}
 #browser.hasfocus.theme-dark #header {
-  background-color: #31363b !important; }
+  background-color: #31363b !important;
+}
 
 #browser #header {
-  background-color: #eff0f1 !important; }
-  #browser #header #titlebar button.vivaldi {
-    color: black;
-    height: 30px;
-    margin-top: 3px; }
-  #browser #header #titlebar div.window-buttongroup {
-    padding-right: 0;
-    padding-top: 5px; }
-    #browser #header #titlebar div.window-buttongroup > button {
-      background-color: transparent;
-      width: 16px !important;
-      height: 16px !important;
-      background-color: transparent !important;
-      margin-right: 5px; }
-      #browser #header #titlebar div.window-buttongroup > button:hover {
-        background-image: transparent !important; }
-      #browser #header #titlebar div.window-buttongroup > button svg {
-        display: none; }
-    #browser #header #titlebar div.window-buttongroup > button.window-minimize {
-      background-image: url("./images/minimize.png");
-      background-size: cover; }
-      #browser #header #titlebar div.window-buttongroup > button.window-minimize:hover {
-        background-image: url("./images/minimize_hover.png"); }
-    #browser #header #titlebar div.window-buttongroup > button.window-maximize {
-      background-image: url("./images/maximize.png");
-      background-size: cover; }
-      #browser #header #titlebar div.window-buttongroup > button.window-maximize:hover {
-        background-image: url("./images/maximize_hover.png"); }
-    #browser #header #titlebar div.window-buttongroup > button.window-close {
-      background-image: url("./images/close.png");
-      background-size: cover; }
-      #browser #header #titlebar div.window-buttongroup > button.window-close:hover {
-        background-image: url("./images/close_hover.png"); }
-  #browser #header #tabs-tabbar-container {
-    padding-top: 5px;
-    height: 28px !important;
-    margin-bottom: 1px;
-    background-color: transparent !important; }
-    #browser #header #tabs-tabbar-container #tabs-container {
-      min-height: 28px; }
-      #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span {
-        margin-right: -5px; }
-        #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span:first-of-type div.tab {
-          border-top-left-radius: 5px !important;
-          border-left: 2px solid rgba(0, 0, 0, 0.25); }
-          #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span:first-of-type div.tab.active {
-            border-top-left-radius: 0 !important;
-            border-left: 2px solid transparent; }
-        #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span:last-of-type div.tab {
-          border-top-right-radius: 5px !important; }
-        #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position {
-          height: 28px;
-          margin-right: -3px;
-          width: calc(var(--Width) + 1px); }
-          #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab {
-            border-radius: 0;
-            padding-top: 3px;
-            color: #000;
-            background-color: #cbccce;
-            border-top: 1px solid rgba(0, 0, 0, 0.25);
-            border-right: 2px solid rgba(0, 0, 0, 0.25);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-            transition: background-color 100ms ease; }
-            #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab:hover {
-              background-color: #d8d9da; }
-            #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab.active {
-              margin-bottom: -1px;
-              padding-top: 1px;
-              border-top: 3px solid #3daee9;
-              background-color: #eff0f1;
-              border-bottom-color: transparent; }
-            #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab div.tab-header {
-              flex: 0 0 28px;
-              padding-top: 2px;
-              padding-bottom: 6px; }
-              #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab div.tab-header span.title {
-                margin-top: -1px; }
-            #browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab .tab-audio {
-              top: 3px; }
-    #browser #header #tabs-tabbar-container div.toolbar {
-      justify-content: start; }
-      #browser #header #tabs-tabbar-container div.toolbar button {
-        color: black;
-        opacity: 1;
-        border: 2px solid transparent;
-        border-radius: 4px;
-        min-width: auto !important;
-        min-height: auto !important;
-        transition: all 100ms ease; }
-        #browser #header #tabs-tabbar-container div.toolbar button:hover {
-          border: 2px solid #3daee9; }
-      #browser #header #tabs-tabbar-container div.toolbar div.newtab {
-        margin-left: 2px; }
-        #browser #header #tabs-tabbar-container div.toolbar div.newtab button {
-          margin-top: 2px; }
+  background-color: #eff0f1 !important;
+}
+#browser #header #titlebar button.vivaldi {
+  color: black;
+  height: 30px;
+  margin-top: 3px;
+}
+#browser #header #titlebar div.window-buttongroup {
+  padding-right: 0;
+  padding-top: 5px;
+}
+#browser #header #titlebar div.window-buttongroup > button {
+  background-color: transparent;
+  width: 16px !important;
+  height: 16px !important;
+  background-color: transparent !important;
+  margin-right: 5px;
+}
+#browser #header #titlebar div.window-buttongroup > button:hover {
+  background-image: transparent !important;
+}
+#browser #header #titlebar div.window-buttongroup > button svg {
+  display: none;
+}
+#browser #header #titlebar div.window-buttongroup > button.window-minimize {
+  background-image: url("./images/minimize.png");
+  background-size: cover;
+}
+#browser #header #titlebar div.window-buttongroup > button.window-minimize:hover {
+  background-image: url("./images/minimize_hover.png");
+}
+#browser #header #titlebar div.window-buttongroup > button.window-maximize {
+  background-image: url("./images/maximize.png");
+  background-size: cover;
+}
+#browser #header #titlebar div.window-buttongroup > button.window-maximize:hover {
+  background-image: url("./images/maximize_hover.png");
+}
+#browser #header #titlebar div.window-buttongroup > button.window-close {
+  background-image: url("./images/close.png");
+  background-size: cover;
+}
+#browser #header #titlebar div.window-buttongroup > button.window-close:hover {
+  background-image: url("./images/close_hover.png");
+}
+#browser #header #tabs-tabbar-container {
+  padding-top: 5px;
+  height: 28px !important;
+  margin-bottom: 1px;
+  background-color: transparent !important;
+}
+#browser #header #tabs-tabbar-container #tabs-container {
+  min-height: 28px;
+}
+#browser #header #tabs-tabbar-container #tabs-container div.tabbar-workspace-button {
+  background-color: #dee0e2;
+  color: black;
+}
+#browser #header #tabs-tabbar-container #tabs-container div.tabbar-workspace-button button:hover {
+  background-color: #c3c7ca;
+}
+#browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span {
+  margin-right: -5px;
+}
+#browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span:first-of-type div.tab {
+  border-top-left-radius: 5px !important;
+  border-left: 2px solid rgba(0, 0, 0, 0.25);
+}
+#browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span:first-of-type div.tab.active {
+  border-top-left-radius: 0 !important;
+  border-left: 2px solid transparent;
+}
+#browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span:last-of-type div.tab {
+  border-top-right-radius: 5px !important;
+}
+#browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position {
+  height: 28px;
+  margin-right: -3px;
+  width: calc(var(--Width) + 1px);
+}
+#browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab {
+  border-radius: 0;
+  padding-top: 3px;
+  color: #000;
+  background-color: #cbccce;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  border-right: 2px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  transition: background-color 100ms ease;
+}
+#browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab:hover {
+  background-color: #d8d9da;
+}
+#browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab.active {
+  margin-bottom: -1px;
+  padding-top: 1px;
+  border-top: 3px solid #3daee9;
+  background-color: #eff0f1;
+  border-bottom-color: transparent;
+}
+#browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab div.tab-header {
+  flex: 0 0 28px;
+  padding-top: 2px;
+  padding-bottom: 6px;
+}
+#browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab div.tab-header span.title {
+  margin-top: -1px;
+}
+#browser #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab .tab-audio {
+  top: 3px;
+}
+#browser #header #tabs-tabbar-container div.toolbar {
+  justify-content: start;
+}
+#browser #header #tabs-tabbar-container div.toolbar button {
+  color: black;
+  opacity: 1;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  min-width: auto !important;
+  min-height: auto !important;
+  transition: all 100ms ease;
+}
+#browser #header #tabs-tabbar-container div.toolbar button:hover {
+  border: 2px solid #3daee9;
+}
+#browser #header #tabs-tabbar-container div.toolbar div.newtab {
+  margin-left: 2px;
+}
+#browser #header #tabs-tabbar-container div.toolbar div.newtab button {
+  margin-top: 2px;
+}
 
 #browser.theme-dark #header {
-  background-color: #31363b !important; }
-  #browser.theme-dark #header #titlebar button.vivaldi {
-    color: #e6e6e6;
-    height: 30px;
-    margin-top: 3px; }
-  #browser.theme-dark #header #titlebar div.window-buttongroup > button.window-minimize {
-    background-image: url("./images/minimize_dark.png"); }
-    #browser.theme-dark #header #titlebar div.window-buttongroup > button.window-minimize:hover {
-      background-image: url("./images/minimize_hover_dark.png"); }
-  #browser.theme-dark #header #titlebar div.window-buttongroup > button.window-maximize {
-    background-image: url("./images/maximize_dark.png"); }
-    #browser.theme-dark #header #titlebar div.window-buttongroup > button.window-maximize:hover {
-      background-image: url("./images/maximize_hover_dark.png"); }
-  #browser.theme-dark #header #titlebar div.window-buttongroup > button.window-close {
-    background-image: url("./images/close_dark.png"); }
-    #browser.theme-dark #header #titlebar div.window-buttongroup > button.window-close:hover {
-      background-image: url("./images/close_dark_hover.png"); }
-  #browser.theme-dark #header #tabs-tabbar-container {
-    background-color: #31363b !important; }
-    #browser.theme-dark #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab {
-      color: #bfbfbf;
-      background-color: #25292d; }
-      #browser.theme-dark #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab:hover {
-        background-color: #3d4349; }
-      #browser.theme-dark #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab.active {
-        color: #e6e6e6;
-        background-color: #31363b; }
-    #browser.theme-dark #header #tabs-tabbar-container div.toolbar button {
-      color: #e6e6e6; }
+  background-color: #31363b !important;
+}
+#browser.theme-dark #header #titlebar button.vivaldi {
+  color: #e6e6e6;
+  height: 30px;
+  margin-top: 3px;
+}
+#browser.theme-dark #header #titlebar div.window-buttongroup > button.window-minimize {
+  background-image: url("./images/minimize_dark.png");
+}
+#browser.theme-dark #header #titlebar div.window-buttongroup > button.window-minimize:hover {
+  background-image: url("./images/minimize_hover_dark.png");
+}
+#browser.theme-dark #header #titlebar div.window-buttongroup > button.window-maximize {
+  background-image: url("./images/maximize_dark.png");
+}
+#browser.theme-dark #header #titlebar div.window-buttongroup > button.window-maximize:hover {
+  background-image: url("./images/maximize_hover_dark.png");
+}
+#browser.theme-dark #header #titlebar div.window-buttongroup > button.window-close {
+  background-image: url("./images/close_dark.png");
+}
+#browser.theme-dark #header #titlebar div.window-buttongroup > button.window-close:hover {
+  background-image: url("./images/close_dark_hover.png");
+}
+#browser.theme-dark #header #tabs-tabbar-container {
+  background-color: #31363b !important;
+}
+#browser.theme-dark #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab {
+  color: #bfbfbf;
+  background-color: #25292d;
+}
+#browser.theme-dark #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab:hover {
+  background-color: #3d4349;
+}
+#browser.theme-dark #header #tabs-tabbar-container #tabs-container div.resize div.tab-strip > span div.tab-position div.tab.active {
+  color: #e6e6e6;
+  background-color: #31363b;
+}
+#browser.theme-dark #header #tabs-tabbar-container div.toolbar button {
+  color: #e6e6e6;
+}
 
 #browser.hasfocus #main div.mainbar div.toolbar {
-  background: #dee0e2; }
+  background: #dee0e2;
+}
 #browser.hasfocus.theme-dark #main div.mainbar div.toolbar {
-  background: #31363b; }
+  background: #31363b;
+}
 
 #browser #main div.mainbar div.toolbar {
   color: black;
   height: 38px;
-  background: #eff0f1; }
-  #browser #main div.mainbar div.toolbar div.UrlBar-AddressField {
-    background-color: #fff;
-    color: black;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.33);
-    padding: 1px; }
-    #browser #main div.mainbar div.toolbar div.UrlBar-AddressField:focus-within {
-      outline: none !important;
-      border-color: #3daee9;
-      border-width: 2px;
-      padding: 0; }
-    #browser #main div.mainbar div.toolbar div.UrlBar-AddressField .UrlFragment--Lowlight {
-      color: black; }
-    #browser #main div.mainbar div.toolbar div.UrlBar-AddressField .UrlFragment--Highlight {
-      color: black; }
-    #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar {
-      background: none !important; }
-      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar div.pageload progress.pageload-indicator {
-        opacity: 0.25;
-        top: -1px;
-        bottom: 0;
-        height: calc(100% + 1px);
-        right: 0;
-        left: 0;
-        border-radius: 5px;
-        background-color: #3daee9; }
-      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar div.pageload.progress-done progress.pageload-indicator {
-        opacity: 0; }
-    #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown {
-      background-color: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(10px);
-      transition: all 1000ms ease;
-      color: black; }
-      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown label.OmniDropdown-Label {
-        opacity: 0.75;
-        font-weight: bold; }
-      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.omni-clickable:hover {
-        background-color: #3daee9;
-        color: #fff; }
-      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.omni-clickable.OmniLinkItem--Highlighted {
-        background-color: #3daee9; }
-      #browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.OmniLinkItem span.OmniLinkItem-Url {
-        padding-top: 1px; }
-  #browser #main div.mainbar div.toolbar div.toolbar-extensions {
-    height: 100%;
-    background: none !important;
-    margin-right: 2px; }
-  #browser #main div.mainbar div.toolbar div.button-toolbar {
-    height: 100%; }
-    #browser #main div.mainbar div.toolbar div.button-toolbar button {
-      border: 2px solid transparent;
-      border-radius: 4px;
-      transition: all 100ms ease; }
-      #browser #main div.mainbar div.toolbar div.button-toolbar button:hover {
-        background-color: transparent !important;
-        border: 2px solid #3daee9; }
-      #browser #main div.mainbar div.toolbar div.button-toolbar button[name="AccountButton"] img {
-        border-radius: 4px; }
-  #browser #main div.mainbar div.toolbar div.UrlBar-PrivateWindowIndicator {
-    color: #116896; }
+  background: #eff0f1;
+}
+#browser #main div.mainbar div.toolbar div.UrlBar-AddressField {
+  background-color: #fff;
+  color: black;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.33);
+  padding: 1px;
+}
+#browser #main div.mainbar div.toolbar div.UrlBar-AddressField:focus-within {
+  outline: none !important;
+  border-color: #3daee9;
+  border-width: 2px;
+  padding: 0;
+}
+#browser #main div.mainbar div.toolbar div.UrlBar-AddressField .UrlFragment--Lowlight {
+  color: black;
+}
+#browser #main div.mainbar div.toolbar div.UrlBar-AddressField .UrlFragment--Highlight {
+  color: black;
+}
+#browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar {
+  background: none !important;
+}
+#browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar div.pageload progress.pageload-indicator {
+  opacity: 0.25;
+  top: -1px;
+  bottom: 0;
+  height: calc(100% + 1px);
+  right: 0;
+  left: 0;
+  border-radius: 5px;
+  background-color: #3daee9;
+}
+#browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.toolbar div.pageload.progress-done progress.pageload-indicator {
+  opacity: 0;
+}
+#browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  transition: all 1000ms ease;
+  color: black;
+}
+#browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown label.OmniDropdown-Label {
+  opacity: 0.75;
+  font-weight: bold;
+}
+#browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.omni-clickable:hover {
+  background-color: #3daee9;
+  color: #fff;
+}
+#browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.omni-clickable.OmniLinkItem--Highlighted {
+  background-color: #3daee9;
+}
+#browser #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown div.OmniLinkItem span.OmniLinkItem-Url {
+  padding-top: 1px;
+}
+#browser #main div.mainbar div.toolbar div.toolbar-extensions {
+  height: 100%;
+  background: none !important;
+  margin-right: 2px;
+}
+#browser #main div.mainbar div.toolbar div.button-toolbar {
+  height: 100%;
+}
+#browser #main div.mainbar div.toolbar div.button-toolbar button {
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: all 100ms ease;
+}
+#browser #main div.mainbar div.toolbar div.button-toolbar button:hover {
+  background-color: transparent !important;
+  border: 2px solid #3daee9;
+}
+#browser #main div.mainbar div.toolbar div.button-toolbar button[name=AccountButton] img {
+  border-radius: 4px;
+}
+#browser #main div.mainbar div.toolbar div.UrlBar-PrivateWindowIndicator {
+  color: #116896;
+}
 
 #browser.theme-dark #main div.mainbar div.toolbar {
-  background: #31363b; }
-  #browser.theme-dark #main div.mainbar div.toolbar div.UrlBar-AddressField {
-    background-color: #1b1e20;
-    color: #fff; }
-    #browser.theme-dark #main div.mainbar div.toolbar div.UrlBar-AddressField .UrlFragment--Lowlight {
-      color: #e6e6e6; }
-    #browser.theme-dark #main div.mainbar div.toolbar div.UrlBar-AddressField .UrlFragment--Highlight {
-      color: #e6e6e6; }
-    #browser.theme-dark #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown {
-      background-color: rgba(27, 30, 32, 0.9);
-      color: #e6e6e6; }
-  #browser.theme-dark #main div.mainbar div.toolbar div.button-toolbar button {
-    color: #e6e6e6; }
-  #browser.theme-dark #main div.mainbar div.toolbar div.UrlBar-PrivateWindowIndicator {
-    color: #3daee9; }
+  background: #31363b;
+}
+#browser.theme-dark #main div.mainbar div.toolbar div.UrlBar-AddressField {
+  background-color: #1b1e20;
+  color: #fff;
+}
+#browser.theme-dark #main div.mainbar div.toolbar div.UrlBar-AddressField .UrlFragment--Lowlight {
+  color: #e6e6e6;
+}
+#browser.theme-dark #main div.mainbar div.toolbar div.UrlBar-AddressField .UrlFragment--Highlight {
+  color: #e6e6e6;
+}
+#browser.theme-dark #main div.mainbar div.toolbar div.UrlBar-AddressField div.OmniDropdown {
+  background-color: rgba(27, 30, 32, 0.9);
+  color: #e6e6e6;
+}
+#browser.theme-dark #main div.mainbar div.toolbar div.button-toolbar button {
+  color: #e6e6e6;
+}
+#browser.theme-dark #main div.mainbar div.toolbar div.UrlBar-PrivateWindowIndicator {
+  color: #3daee9;
+}
 
 .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button {
-  border-radius: 0 !important; }
+  border-radius: 0 !important;
+}
 
 #browser div.toolbar-statusbar {
-  background-color: #eff0f1; }
-  #browser div.toolbar-statusbar div.page-zoom-controls input[type=range] {
-    appearance: none;
-    background: transparent; }
-    #browser div.toolbar-statusbar div.page-zoom-controls input[type=range]::-webkit-slider-thumb {
-      appearance: none;
-      border-radius: 50%;
-      background-color: #fcfcfc;
-      border: 1px solid #bfbfbf;
-      width: 16px;
-      height: 16px;
-      margin-top: -6px; }
-      #browser div.toolbar-statusbar div.page-zoom-controls input[type=range]::-webkit-slider-thumb:focus, #browser div.toolbar-statusbar div.page-zoom-controls input[type=range]::-webkit-slider-thumb:hover {
-        border: 1px solid #3daee9; }
-    #browser div.toolbar-statusbar div.page-zoom-controls input[type=range]::-webkit-slider-runnable-track {
-      width: 100%;
-      height: 6px;
-      border-radius: 4px;
-      border: 1px solid #bfbfbf;
-      background-color: #dbdcdc; }
+  background-color: #eff0f1;
+}
+#browser div.toolbar-statusbar div.page-zoom-controls input[type=range] {
+  appearance: none;
+  background: transparent;
+}
+#browser div.toolbar-statusbar div.page-zoom-controls input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  border-radius: 50%;
+  background-color: #fcfcfc;
+  border: 1px solid #bfbfbf;
+  width: 16px;
+  height: 16px;
+  margin-top: -6px;
+}
+#browser div.toolbar-statusbar div.page-zoom-controls input[type=range]::-webkit-slider-thumb:focus, #browser div.toolbar-statusbar div.page-zoom-controls input[type=range]::-webkit-slider-thumb:hover {
+  border: 1px solid #3daee9;
+}
+#browser div.toolbar-statusbar div.page-zoom-controls input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 4px;
+  border: 1px solid #bfbfbf;
+  background-color: #dbdcdc;
+}
 
 #browser.theme-dark div.toolbar-statusbar {
-  background-color: #31363b; }
+  background-color: #31363b;
+}
 
 #browser.hasfocus #main div#panels-container {
-  background-color: #dee0e2; }
+  background-color: #dee0e2;
+}
 #browser.hasfocus.theme-dark #main div#panels-container {
-  background-color: #31363b; }
+  background-color: #31363b;
+}
 
 #browser #main div#panels-container {
-  background-color: #eff0f1; }
-  #browser #main div#panels-container div#panels {
-    /*
-    Unsure why vivaldi sets the justify-content to flex-end
-    when opening a web panel.
-    */ }
-    #browser #main div#panels-container div#panels.leak #switch {
-      justify-content: flex-start !important; }
-    #browser #main div#panels-container div#panels div#switch {
-      backdrop-filter: none !important; }
-      #browser #main div#panels-container div#panels div#switch button {
-        margin: 1px;
-        width: calc(100% - 2px);
-        border: 2px solid transparent;
-        transition: all 100ms ease; }
-        #browser #main div#panels-container div#panels div#switch button:not(.active):hover {
-          background-color: transparent;
-          border: 2px solid #3daee9;
-          border-radius: 4px; }
-        #browser #main div#panels-container div#panels div#switch button span {
-          width: 16px;
-          height: 16px; }
-        #browser #main div#panels-container div#panels div#switch button.active {
-          box-shadow: inset -2px 0 0 #3daee9;
-          background-color: rgba(61, 174, 233, 0.2);
-          color: #3daee9 !important; }
-          #browser #main div#panels-container div#panels div#switch button.active svg .small-icon-fill {
-            fill: #3daee9; }
-    #browser #main div#panels-container div#panels div.panel-group input {
-      border-radius: 4px;
-      padding: 5px;
-      box-shadow: none; }
-      #browser #main div#panels-container div#panels div.panel-group input:focus-within {
-        padding: 4px;
-        outline: none !important;
-        border-color: #3daee9;
-        border-width: 2px; }
-    #browser #main div#panels-container div#panels div.panel-group select {
-      border-radius: 4px;
-      padding: 5px; }
-      #browser #main div#panels-container div#panels div.panel-group select:focus-within {
-        padding: 4px;
-        outline: none !important;
-        border-color: #3daee9;
-        border-width: 2px; }
-    #browser #main div#panels-container div#panels div.panel-group div.sortselector-compact {
-      border-radius: 4px; }
-      #browser #main div#panels-container div#panels div.panel-group div.sortselector-compact div.sortselector-area select.sortselector-dropdown {
-        padding: 3px 5px; }
-    #browser #main div#panels-container div#panels div.panel-group div.toolbar-group > div > button {
-      border-radius: 0; }
-    #browser #main div#panels-container div#panels div.panel-group div.toolbar-group > div:first-of-type > button {
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px; }
-    #browser #main div#panels-container div#panels div.panel-group div.toolbar-group > div:last-of-type > button {
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px; }
-    #browser #main div#panels-container div#panels div.panel-group div.button-toolbar > button {
-      border-radius: 4px; }
-    #browser #main div#panels-container div#panels div.panel-group div.vivaldi-tree div.tree-row {
-      border-radius: 4px; }
-      #browser #main div#panels-container div#panels div.panel-group div.vivaldi-tree div.tree-row.tree-row-selected {
-        background-color: #3daee9;
-        box-shadow: none;
-        color: #fff;
-        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.33); }
+  background-color: #eff0f1;
+}
+#browser #main div#panels-container div#panels {
+  /*
+  Unsure why vivaldi sets the justify-content to flex-end
+  when opening a web panel.
+  */
+}
+#browser #main div#panels-container div#panels.leak #switch {
+  justify-content: flex-start !important;
+}
+#browser #main div#panels-container div#panels div#switch {
+  backdrop-filter: none !important;
+}
+#browser #main div#panels-container div#panels div#switch button {
+  margin: 1px;
+  width: calc(100% - 2px);
+  border: 2px solid transparent;
+  transition: all 100ms ease;
+}
+#browser #main div#panels-container div#panels div#switch button:not(.active):hover {
+  background-color: transparent;
+  border: 2px solid #3daee9;
+  border-radius: 4px;
+}
+#browser #main div#panels-container div#panels div#switch button span {
+  width: 16px;
+  height: 16px;
+}
+#browser #main div#panels-container div#panels div#switch button.active {
+  box-shadow: inset -2px 0 0 #3daee9;
+  background-color: rgba(61, 174, 233, 0.2);
+  color: #3daee9 !important;
+}
+#browser #main div#panels-container div#panels div#switch button.active svg .small-icon-fill {
+  fill: #3daee9;
+}
+#browser #main div#panels-container div#panels div.panel-group input {
+  border-radius: 4px;
+  padding: 5px;
+  box-shadow: none;
+}
+#browser #main div#panels-container div#panels div.panel-group input:focus-within {
+  padding: 4px;
+  outline: none !important;
+  border-color: #3daee9;
+  border-width: 2px;
+}
+#browser #main div#panels-container div#panels div.panel-group select {
+  border-radius: 4px;
+  padding: 5px;
+}
+#browser #main div#panels-container div#panels div.panel-group select:focus-within {
+  padding: 4px;
+  outline: none !important;
+  border-color: #3daee9;
+  border-width: 2px;
+}
+#browser #main div#panels-container div#panels div.panel-group div.sortselector-compact {
+  border-radius: 4px;
+}
+#browser #main div#panels-container div#panels div.panel-group div.sortselector-compact div.sortselector-area select.sortselector-dropdown {
+  padding: 3px 5px;
+}
+#browser #main div#panels-container div#panels div.panel-group div.toolbar-group > div > button {
+  border-radius: 0;
+}
+#browser #main div#panels-container div#panels div.panel-group div.toolbar-group > div:first-of-type > button {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+#browser #main div#panels-container div#panels div.panel-group div.toolbar-group > div:last-of-type > button {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+#browser #main div#panels-container div#panels div.panel-group div.button-toolbar > button {
+  border-radius: 4px;
+}
+#browser #main div#panels-container div#panels div.panel-group div.vivaldi-tree div.tree-row {
+  border-radius: 4px;
+}
+#browser #main div#panels-container div#panels div.panel-group div.vivaldi-tree div.tree-row.tree-row-selected {
+  background-color: #3daee9;
+  box-shadow: none;
+  color: #fff;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.33);
+}
 
 #browser.theme-dark #main div#panels-container {
-  background-color: #31363b; }
+  background-color: #31363b;
+}
 
-#browser #modal-bg {
-  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.33); }
-  #browser #modal-bg > div {
-    background-color: transparent !important;
-    backdrop-filter: blur(10px); }
-    #browser #modal-bg > div div.quick-command-container {
-      background-color: transparent !important; }
-      #browser #modal-bg > div div.quick-command-container div.quick-commands {
-        background-color: rgba(255, 255, 255, 0.85) !important;
-        backdrop-filter: blur(10px); }
-      #browser #modal-bg > div div.quick-command-container div.qc-entry {
-        background-color: rgba(255, 255, 255, 0.9) !important;
-        backdrop-filter: blur(10px); }
+#browser #modal-bg.qc-modal {
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.33);
+}
+#browser #modal-bg.qc-modal > div {
+  background-color: transparent !important;
+  backdrop-filter: blur(10px);
+}
+#browser #modal-bg.qc-modal > div div.quick-command-container {
+  background-color: transparent !important;
+}
+#browser #modal-bg.qc-modal > div div.quick-command-container div.quick-commands {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(10px);
+}
+#browser #modal-bg.qc-modal > div div.quick-command-container div.qc-entry {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+}
 
 #browser.theme-dark #modal-bg {
-  box-shadow: none; }
-  #browser.theme-dark #modal-bg > div {
-    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.33);
-    background-color: transparent !important;
-    animation: dropfade 250ms ease-in-out; }
-    #browser.theme-dark #modal-bg > div div.quick-command-container {
-      background-color: transparent !important;
-      color: #e6e6e6; }
-      #browser.theme-dark #modal-bg > div div.quick-command-container div.quick-commands {
-        background-color: rgba(0, 0, 0, 0.75) !important; }
-      #browser.theme-dark #modal-bg > div div.quick-command-container div.qc-entry {
-        background-color: rgba(0, 0, 0, 0.8) !important; }
+  box-shadow: none;
+}
+#browser.theme-dark #modal-bg > div {
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.33);
+  background-color: transparent !important;
+  animation: dropfade 250ms ease-in-out;
+}
+#browser.theme-dark #modal-bg > div div.quick-command-container {
+  background-color: transparent !important;
+  color: #e6e6e6;
+}
+#browser.theme-dark #modal-bg > div div.quick-command-container div.quick-commands {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+#browser.theme-dark #modal-bg > div div.quick-command-container div.qc-entry {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
 
 #browser #webpage-stack nav.startpage-navigation {
   background-color: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(10px); }
-  #browser #webpage-stack nav.startpage-navigation .startpage-navigation-group:last-of-type {
-    border-left-width: 0; }
+  backdrop-filter: blur(10px);
+}
+#browser #webpage-stack nav.startpage-navigation .startpage-navigation-group:last-of-type {
+  border-left-width: 0;
+}
 #browser #webpage-stack .dial {
   background-color: rgba(255, 255, 255, 0.75) !important;
   backdrop-filter: blur(5px);
   transition: all 100ms ease;
-  border: 2px solid transparent; }
-  #browser #webpage-stack .dial:hover {
-    margin-top: 0;
-    border: 2px solid #3daee9;
-    box-shadow: 0px 0px 6px 1px #3daee9; }
+  border: 2px solid transparent;
+}
+#browser #webpage-stack .dial:hover {
+  margin-top: 0;
+  border: 2px solid #3daee9;
+  box-shadow: 0px 0px 6px 1px #3daee9;
+}
 #browser.theme-dark #webpage-stack nav.startpage-navigation {
   background-color: rgba(0, 0, 0, 0.5);
-  color: #fff; }
+  color: #fff;
+}
 #browser.theme-dark #webpage-stack .dial {
   background-color: rgba(0, 0, 0, 0.5) !important;
-  color: rgba(255, 255, 255, 0.9); }
+  color: rgba(255, 255, 255, 0.9);
+}
 
 /*
 	Some windows-specific fixes so that the theme works on windows too!
@@ -399,8 +534,10 @@ div#browser {
 */
 #browser.win10 #header #titlebar .window-buttongroup {
   padding-top: 10px !important;
-  padding-right: 5px !important; }
+  padding-right: 5px !important;
+}
 #browser.win10 #tabs-container:not(.none).top {
-  padding-right: 90px !important; }
+  padding-right: 90px !important;
+}
 
 /*# sourceMappingURL=breeze.css.map */

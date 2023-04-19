@@ -106,7 +106,16 @@
 				// 	padding-right: 90px !important;
 				// }
 
-				
+				div.tabbar-workspace-button {
+					background-color: $kdeBgColor;
+					color: black;
+
+					button {
+						&:hover {
+							background-color: darken($kdeBgColor, 10%);
+						}
+					}
+				}				
 
 				// Contains all tabs 
 				div.resize {
